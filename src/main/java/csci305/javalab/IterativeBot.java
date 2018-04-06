@@ -1,31 +1,32 @@
-package main.java.csci305.javalab;
+package csci305.javalab;
+
+import java.util.Map;
 
 public class IterativeBot extends Player{
     private int moveNum;
 
-    public IterativeBot(String name) {
-        super(name);
+    public IterativeBot(String name, Map<String, Element> moves) {
+        super(name, moves);
         moveNum = 0;
     }
 
     @Override
     public Element play() {
-        Element move = null;
         switch(moveNum) {
             case 0:
-                move = new Rock("Rock");
+                currentPlay = moves.get("Rock");
                 break;
             case 1:
-                move = new Paper("Paper");
+                currentPlay = moves.get("Paper");
                 break;
             case 2:
-                move = new Scissors("Scissors");
+                currentPlay = moves.get("Scissors");
                 break;
             case 3:
-                move = new Lizard("Lizard");
+                currentPlay = moves.get("Lizard");
                 break;
             case 4:
-                move = new Spock("Spock");
+                currentPlay = moves.get("Spock");
                 break;
         }
 
@@ -33,6 +34,6 @@ public class IterativeBot extends Player{
         if(moveNum > 4)
             moveNum = 0;
 
-        return move;
+        return currentPlay;
     }
 }

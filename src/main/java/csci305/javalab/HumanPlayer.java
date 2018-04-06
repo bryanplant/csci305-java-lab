@@ -1,18 +1,18 @@
-package main.java.csci305.javalab;
+package csci305.javalab;
 
+import java.util.Map;
 import java.util.Scanner;
 
 public class HumanPlayer extends Player{
 
-    public HumanPlayer(String name) {
-        super(name);
+    HumanPlayer(String name, Map<String, Element> moves) {
+        super(name, moves);
     }
 
     @Override
     public Element play() {
         Scanner in = new Scanner(System.in);
         int selection = -1;
-        Element move = null;
 
         System.out.println("(1) : Rock");
         System.out.println("(2) : Paper");
@@ -20,9 +20,9 @@ public class HumanPlayer extends Player{
         System.out.println("(4) : Lizard");
         System.out.println("(5) : Spock");
         while (selection == -1) {
-            System.out.println("Enter your move: ");
+            System.out.print("Enter your move: ");
 
-            selection = Integer.parseInt(in.nextLine());
+            selection = in.nextInt();
 
             if (selection < 1 || selection > 5) {
                 System.out.println("Invalid move. Please try again");
@@ -32,17 +32,22 @@ public class HumanPlayer extends Player{
 
         switch(selection) {
             case 1:
-                return new Rock("Rock");
+                currentPlay = moves.get("Rock");
+                break;
             case 2:
-                return new Paper("Paper");
+                currentPlay = moves.get("Paper");
+                break;
             case 3:
-                return new Scissors("Scissors");
+                currentPlay = moves.get("Scissors");
+                break;
             case 4:
-                return new Lizard("Lizard");
+                currentPlay = moves.get("Lizard");
+                break;
             case 5:
-                return new Spock("Spock");
+                currentPlay = moves.get("Spock");
+                break;
         }
-
-        return move;
+        System.out.println();
+        return currentPlay;
     }
 }

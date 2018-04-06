@@ -1,4 +1,4 @@
-package main.java.csci305.javalab;
+package csci305.javalab;
 
 public abstract class Element {
     private String name;  //name of element

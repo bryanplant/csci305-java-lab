@@ -1,13 +1,16 @@
-package main.java.csci305.javalab;
+package csci305.javalab;
+
+import java.util.Map;
 
 public class StupidBot extends Player{
 
-    public StupidBot(String name) {
-        super(name);
+    StupidBot(String name, Map<String, Element> moves) {
+        super(name, moves);
     }
 
     @Override
     public Element play() {
-        return new Lizard("Lizard");
+        currentPlay = moves.get("Lizard");
+        return currentPlay;
     }
 }

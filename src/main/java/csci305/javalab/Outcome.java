@@ -1,4 +1,4 @@
-package main.java.csci305.javalab;
+package csci305.javalab;
 
 //represents outcome of Element compareTo method
 public class Outcome {
@@ -8,6 +8,14 @@ public class Outcome {
     public Outcome(String info, String outcome) {
         this.info = info;
         this.outcome = outcome;
+    }
+
+    public String getInfo() {
+        return info;
+    }
+
+    public String getOutcome() {
+        return outcome;
     }
 
     @Override
