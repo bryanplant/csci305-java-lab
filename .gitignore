@@ -79,7 +79,7 @@ tags
 .nfs*
 ### Java template
 # Compiled class file
-*.class
+*.class*
 
 # Log file
 *.log
