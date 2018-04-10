@@ -5,7 +5,6 @@ import java.util.Random;
 
 public class MyBot extends Player {
 
-
     MyBot(String name, Map<String, Element> moves) {
         super(name, moves);
     }

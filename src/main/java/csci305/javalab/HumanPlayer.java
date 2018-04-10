@@ -1,5 +1,6 @@
 package csci305.javalab;
 
+import java.util.InputMismatchException;
 import java.util.Map;
 import java.util.Scanner;
 
@@ -22,30 +23,34 @@ public class HumanPlayer extends Player{
         while (selection == -1) {
             System.out.print("Enter your move: ");
 
-            selection = in.nextInt();
+            try {
+                selection = in.nextInt();
 
-            if (selection < 1 || selection > 5) {
-                System.out.println("Invalid move. Please try again");
+                switch (selection) {
+                    case 1:
+                        currentPlay = moves.get("Rock");
+                        break;
+                    case 2:
+                        currentPlay = moves.get("Paper");
+                        break;
+                    case 3:
+                        currentPlay = moves.get("Scissors");
+                        break;
+                    case 4:
+                        currentPlay = moves.get("Lizard");
+                        break;
+                    case 5:
+                        currentPlay = moves.get("Spock");
+                        break;
+                    default:
+                        throw new InputMismatchException();
+                }
+            }
+            catch(InputMismatchException e) {
+                System.out.println("Invalid input. Try Again.");
+                in.nextLine();
                 selection = -1;
             }
-        }
-
-        switch(selection) {
-            case 1:
-                currentPlay = moves.get("Rock");
-                break;
-            case 2:
-                currentPlay = moves.get("Paper");
-                break;
-            case 3:
-                currentPlay = moves.get("Scissors");
-                break;
-            case 4:
-                currentPlay = moves.get("Lizard");
-                break;
-            case 5:
-                currentPlay = moves.get("Spock");
-                break;
         }
         System.out.println();
         return currentPlay;

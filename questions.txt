@@ -1,0 +1,32 @@
+1. In order to implement last play bot I created 3 new instance variables in the Player
+   class: currentPlay, lastPlay and opponent. The opponent of each player is set after the two
+   players are created. This allows LastPlayBot to access its opponent's lastPlay variable which is
+   updated by calling the update method of the Player after both players play. The update method sets
+   lastPlay to currentPlay which is set when the Player plays. If lastPlay is null, then LastPlayBot
+   plays a random move by creating a RandomBot.
+
+2. I created MyBot based on a couple of articles I read about how rock paper scissors players are likely
+   to play the same move multiple times if they win with it. In order to counter this behavior, MyBot
+   looks at its opponent's last move and randomly plays one of the two moves that beats that move. If
+   lastPlay is null then it plays a random move.
+
+3.
+
+4. I like the interaction between two LastPlayBots and how they just switch back and forth between two moves.
+   The only Players that StupidBot can beat is RandomBot and HumanPlayer if they play really poorly.
+   MyBot seems to be a good match against every bot except for IterativeBot since it never plays the same move twice.
+   As a Human Play I can consistently beat all of the bots except for RandomBot and MyBot.
+
+5.
+
+6.
+
+7. The thing I dislike most about Java is that it feels very repetitive with things like type declarations and
+   creating getters and setters.
+
+8. I liked the lab. I enjoyed the idea of it and it was fun to play with at the end. I didn't like the repetition
+   required to create the elements and players and writing out all of the possible outcomes.
+
+9. 10 hours
+
+10. I've had a lot of experience with Java from CSCI 112, 132, 232 and machine learning.

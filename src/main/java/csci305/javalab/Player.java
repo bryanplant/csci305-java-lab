@@ -7,7 +7,6 @@ public abstract class Player {
     protected Map<String, Element> moves;
     protected Element currentPlay;
     protected Element lastPlay;
-    protected String lastOutcome;
     protected Player opponent;
 
     Player(String name, Map<String, Element> moves) {
