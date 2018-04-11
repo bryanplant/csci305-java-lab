@@ -1,7 +1,9 @@
 package csci305.javalab;
 
+//represents the Lizard move
 public class Lizard extends Element {
 
+    //create a Lizard Element with a name
     public Lizard(String name) {
         super(name);
     }

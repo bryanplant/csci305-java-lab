@@ -1,7 +1,9 @@
 package csci305.javalab;
 
+// represents the Scissors move
 public class Scissors extends Element {
 
+    // create a Scissors with a name
     public Scissors(String name) {
         super(name);
     }

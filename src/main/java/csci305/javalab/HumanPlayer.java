@@ -4,12 +4,15 @@ import java.util.InputMismatchException;
 import java.util.Map;
 import java.util.Scanner;
 
+//Player that is controlled by a human
 public class HumanPlayer extends Player{
 
+    //create a Human Player with its name and map of valid moves
     HumanPlayer(String name, Map<String, Element> moves) {
         super(name, moves);
     }
 
+    //prompt the user to select a valid move to play
     @Override
     public Element play() {
         Scanner in = new Scanner(System.in);
@@ -46,6 +49,7 @@ public class HumanPlayer extends Player{
                         throw new InputMismatchException();
                 }
             }
+            //catch an exception if wrong input type or int is not between 1 and 5
             catch(InputMismatchException e) {
                 System.out.println("Invalid input. Try Again.");
                 in.nextLine();

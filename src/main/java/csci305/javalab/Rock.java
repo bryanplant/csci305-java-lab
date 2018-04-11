@@ -1,8 +1,10 @@
 package csci305.javalab;
 
+// represents the Rock move
 public class Rock extends Element {
 
-    public Rock(String name) {
+    // create a Rock with a name
+    Rock(String name) {
         super(name);
     }
 

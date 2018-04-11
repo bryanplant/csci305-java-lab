@@ -2,16 +2,16 @@ package csci305.javalab;
 
 import java.util.Map;
 
+//Bot that plays the move that its opponent played last turn
 public class LastPlayBot extends Player {
 
-    public LastPlayBot(String name, Map<String, Element> moves) {
+    //create a Last Play Bot with a name and map of valid moves
+    LastPlayBot(String name, Map<String, Element> moves) {
         super(name, moves);
     }
 
-    public void setOpponent(Player opponent) {
-        this.opponent = opponent;
-    }
-
+    // uses opponent variable in order to play the opponent's last play
+    // plays a random move if there is no lastPlay yet
     @Override
     public Element play() {
         if(opponent.lastPlay == null)

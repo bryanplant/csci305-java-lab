@@ -2,14 +2,17 @@ package csci305.javalab;
 
 import java.util.Map;
 
+//Bot that iterates through all valid moves in order
 public class IterativeBot extends Player{
-    private int moveNum;
+    private int moveNum;    //keeps track of which element to play next
 
-    public IterativeBot(String name, Map<String, Element> moves) {
+    //create an Iterative Bot with a name and map of valid moves
+    IterativeBot(String name, Map<String, Element> moves) {
         super(name, moves);
         moveNum = 0;
     }
 
+    //plays moves in order each turn starting with Rock
     @Override
     public Element play() {
         switch(moveNum) {
@@ -31,6 +34,7 @@ public class IterativeBot extends Player{
         }
 
         moveNum ++;
+        //set moveNum back to Rock after Spock
         if(moveNum > 4)
             moveNum = 0;
 

@@ -1,8 +1,10 @@
 package csci305.javalab;
 
+//represents the Paper move
 public class Paper extends Element {
 
-    public Paper(String name) {
+    //create a Paper Element with a name
+    Paper(String name) {
         super(name);
     }
 

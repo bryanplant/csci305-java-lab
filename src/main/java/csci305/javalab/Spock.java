@@ -1,8 +1,10 @@
 package csci305.javalab;
 
+// represents a Spock move
 public class Spock extends Element {
 
-    public Spock(String name) {
+    // create a Spock with a name
+    Spock(String name) {
         super(name);
     }
 
