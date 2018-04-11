@@ -10,16 +10,34 @@
    looks at its opponent's last move and randomly plays one of the two moves that beats that move. If
    lastPlay is null then it plays a random move.
 
-3.
+3. Java is a statically typed language which means that it performs type checking at compile time. This means
+   that if it contains errors, it will fail to compile until these errors have been fixed. Also, Java requires
+   that the data type of a variable is declared before it is used.
+   Java is a strongly typed language which means that every value has a type and the type of that value cannot
+   change.
+   Private, final and static methods and variables use static binding which is done at compile time because
+   these methods cannot be overridden. The binding of overridden methods is resolved dynamically during runtime.
+   There are 4 types in Java. Primitive types correspond to primitive values such as int, short, char etc...
+   Null type is the type of the value "null". Array types are types of arrays of values. And class types are
+   types of objects.
+
+   sources:
+   https://docs.oracle.com/cd/E57471_01/bigData.100/extensions_bdd/src/cext_transform_typing.html
+   https://beginnersbook.com/2013/04/java-static-dynamic-binding/
 
 4. I like the interaction between two LastPlayBots and how they just switch back and forth between two moves.
    The only Players that StupidBot can beat is RandomBot and HumanPlayer if they play really poorly.
    MyBot seems to be a good match against every bot except for IterativeBot since it never plays the same move twice.
    As a Human Play I can consistently beat all of the bots except for RandomBot and MyBot.
 
-5.
+5. There is no way to design a bot that is more likely to win against another player if we assume the opponent will
+   play randomly since every move has an equal chance of winning. However, if we are able to assume something about
+   the opponent's play style then it is possible to implement a counter to that opponent. This can be seen when in
+   Rock-Paper-Scissors when a beginner plays a better player, the better player can normally strategize based on the
+   how beginners normally play.
 
-6.
+6. I think I'm biased towards Java since I've had to use it so much throughout college. I prefer it over languages like
+   Python because of its structure and its readability.
 
 7. The thing I dislike most about Java is that it feels very repetitive with things like type declarations and
    creating getters and setters.
